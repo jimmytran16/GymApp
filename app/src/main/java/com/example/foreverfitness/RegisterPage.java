@@ -52,8 +52,8 @@ public class RegisterPage extends AppCompatActivity {
                 int selected_weight = radioWeight.getCheckedRadioButtonId();
 
                 radioGenderChosen = (RadioButton)findViewById(selected_id);
-                radioHeightChosen = (RadioButton)findViewById(selected_id);
-                radioGenderChosen = (RadioButton)findViewById(selected_id);
+                radioHeightChosen = (RadioButton)findViewById(selected_height);
+                radioWeightChosen = (RadioButton)findViewById(selected_weight);
                 char gender = getGender(radioGenderChosen.getText().toString());
                 //chosen measurements for height and weight
                 String height_measurement = radioHeightChosen.getText().toString();

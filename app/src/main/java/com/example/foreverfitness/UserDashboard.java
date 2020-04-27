@@ -1,6 +1,7 @@
 package com.example.foreverfitness;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +28,7 @@ public class UserDashboard extends AppCompatActivity {
         WEIGHT = (TextView)findViewById(R.id.dash_weight);
         HEIGHT = (TextView)findViewById(R.id.dash_height);
         signOutBtn = (Button)findViewById(R.id.signoutBtn);
+        weightEditBtn = (ImageButton)findViewById(R.id.weightEditBtn);
         accountSettingsBtn = (ImageButton)findViewById(R.id.accountSettingBtn);
 //        User user = (User)getIntent().getSerializableExtra("User"); //get the User object from the intent
         FULLNAME.setText(UserAuth.currentUser.getFullname());
@@ -52,6 +54,12 @@ public class UserDashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(UserDashboard.this,AccountSettingsPage.class)); // Go to the Account's settings page
+            }
+        });
+        weightEditBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UserDashboard.this,WeightEntryPage.class));
             }
         });
     }

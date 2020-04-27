@@ -9,6 +9,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import com.example.foreverfitness.Model.History;
 import com.example.foreverfitness.Model.User;
 import com.example.foreverfitness.auth.UserAuth;
 
@@ -24,8 +25,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CreateTableQueries = "CREATE TABLE Users (fullname varchar(40),address varchar(60),email varchar(30),phonenumber varchar(20),username varchar(20),password varchar(30),height varchar(7),weight varchar(7),goalweight varchar(7),goaldate varchar(11),gender varchar(1));";
+        String CreateLogsQuery = "CREATE TABLE Logs(username varchar(20),date_entry varchar(11),weight_entry varchar(7));";
         db.execSQL(CreateTableQueries);
-        db.close();
+        db.execSQL(CreateLogsQuery);
     }
     //this is called if the db version number changes. It prevents previous users apps from breaking when you change the dataabse design
     @Override
@@ -47,6 +49,23 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         contents.put("goaldate",user.getGoaldate());
         contents.put("gender",String.valueOf(user.getGender()));
         long success = db.insert("Users",null,contents);
+        if(success == -1){
+            db.close();
+            return false;
+        }
+        else {
+            db.close();
+            return true;
+        }
+    }
+    //function to insert the logs into the DB
+    public boolean addLog(History history){ //function to inserts the user crudentials
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contents = new ContentValues(); //object to store user values in a key value fashion to insert into the DB
+        contents.put("username",history.getUsername());
+        contents.put("date_entry",history.getEntryDate());
+        contents.put("weight_entry",history.getWeighEntered());
+        long success = db.insert("Logs",null,contents);
         if(success == -1){
             db.close();
             return false;
