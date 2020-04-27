@@ -23,7 +23,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     // this ia called the firs time a a db is accessed there should be code in here to eate a new database.
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CreateTableQueries = "CREATE TABLE Users (fullname varchar(40),address varchar(60),email varchar(30),phonenumber varchar(20),username varchar(20),password varchar(30),height int(11),weight int(11),goalweight int(11),goaldate varchar(11),gender varchar(1));";
+        String CreateTableQueries = "CREATE TABLE Users (fullname varchar(40),address varchar(60),email varchar(30),phonenumber varchar(20),username varchar(20),password varchar(30),height varchar(7),weight varchar(7),goalweight varchar(7),goaldate varchar(11),gender varchar(1));";
         db.execSQL(CreateTableQueries);
         db.close();
     }
@@ -73,9 +73,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 user.setPhonenumber(cur.getString(3));
                 user.setUsername(cur.getString(4));
                 user.setPassword(cur.getString(5));
-                user.setHeight(cur.getInt(6));
-                user.setWeight(cur.getInt(7));
-                user.setGoalweight(cur.getInt(8));
+                user.setHeight(cur.getString(6));
+                user.setWeight(cur.getString(7));
+                user.setGoalweight(cur.getString(8));
                 user.setGoaldate(cur.getString(9));
                 user.setGender(cur.getString(10).charAt(0));
                 db.close();

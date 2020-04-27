@@ -6,253 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
-    <TextView
-        android:id="@+id/textView6"
-        android:height="27.5dp"
-        android:layout_width="75dp"
-        android:layout_height="17dp"
-        android:width="287.5dp"
-        android:text="Height"
-        android:textColor="#FF47525E"
-        android:textFontWeight="600"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/height"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="75dp"
-        android:layout_height="17dp"
-        android:width="287.5dp"
-        android:text="Username"
-        android:textColor="#FF47525E"
-        android:textFontWeight="600"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/signup_username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="75dp"
-        android:layout_height="17dp"
-        android:width="287.5dp"
-        android:text="Password"
-        android:textColor="#FF47525E"
-        android:textFontWeight="600"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/signup_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="75dp"
-        android:layout_height="17dp"
-        android:width="287.5dp"
-        android:text="Weight"
-        android:textColor="#FF47525E"
-        android:textFontWeight="600"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/weight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="75dp"
-        android:layout_height="17dp"
-        android:width="287.5dp"
-        android:text="Phone number"
-        android:textColor="#FF47525E"
-        android:textFontWeight="600"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="75dp"
-        android:layout_height="17dp"
-        android:width="287.5dp"
-        android:text="Email"
-        android:textColor="#FF47525E"
-        android:textFontWeight="600"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="75dp"
-        android:layout_height="17dp"
-        android:width="287.5dp"
-        android:text="Address"
-        android:textColor="#FF47525E"
-        android:textFontWeight="600"
-        android:textSize="13dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/address"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="113dp"
-        android:layout_height="93dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/profile"
-        android:src="@drawable/profilepicdefault"
-        app:layout_constraintBottom_toTopOf="@+id/fullname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/accsetting_phone"
-        android:layout_width="247dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="76dp"
-        android:background="@drawable/signupfields"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/signup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/accsetting_goaldate"
-        android:layout_width="247dp"
-        android:layout_height="30dp"
-        android:background="@drawable/signupfields"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/fullname"
-        android:layout_width="365dp"
-        android:layout_height="30dp"
-        android:background="@drawable/signupfields"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/address"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
-
-    <EditText
-        android:id="@+id/accsetting_gender"
-        android:layout_width="365dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/signupfields"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/accsetting_address"
-        android:layout_width="365dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/signupfields"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/accsetting_weight"
-        android:layout_width="365dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/signupfields"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/signup_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/accsetting_goalweight"
-        android:layout_width="365dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/signupfields"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/accsetting_height"
-        android:layout_width="365dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/signupfields"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/signup_username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/updateBtn"
-        android:layout_width="108dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/userpass_fields"
-        android:text="SIGN UP"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:layout_width="361dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="12dp"
-        android:width="287.5dp"
-        android:text="By Signing up, I consent that I have read and agree to all the terms and conditions."
-        android:textColor="#FF47525E"
-        android:textFontWeight="600"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/signup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/textView9"
         android:layout_width="195dp"
@@ -272,23 +25,26 @@
     <TextView
         android:layout_width="75dp"
         android:layout_height="17dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:width="287.5dp"
         android:text="Full Name"
         android:textColor="#FF47525E"
         android:textFontWeight="600"
         android:textSize="13dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register_fullname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="79dp"
         android:layout_height="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:width="287.5dp"
         android:text="Gender:"
         android:textColor="#FF47525E"
@@ -296,9 +52,266 @@
         android:textSize="13dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:layout_width="75dp"
+        android:layout_height="17dp"
+        android:width="287.5dp"
+        android:height="27.5dp"
+        android:text="Height"
+        android:textColor="#FF47525E"
+        android:textFontWeight="600"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="75dp"
+        android:layout_height="17dp"
+        android:width="287.5dp"
+        android:text="Username"
+        android:textColor="#FF47525E"
+        android:textFontWeight="600"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="75dp"
+        android:layout_height="17dp"
+        android:width="287.5dp"
+        android:text="Password"
+        android:textColor="#FF47525E"
+        android:textFontWeight="600"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="75dp"
+        android:layout_height="17dp"
+        android:width="287.5dp"
+        android:text="Weight"
+        android:textColor="#FF47525E"
+        android:textFontWeight="600"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="75dp"
+        android:layout_height="17dp"
+        android:width="287.5dp"
+        android:text="Phone number"
+        android:textColor="#FF47525E"
+        android:textFontWeight="600"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="75dp"
+        android:layout_height="17dp"
+        android:width="287.5dp"
+        android:text="Email"
+        android:textColor="#FF47525E"
+        android:textFontWeight="600"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="75dp"
+        android:layout_height="17dp"
+        android:width="287.5dp"
+        android:text="Address"
+        android:textColor="#FF47525E"
+        android:textFontWeight="600"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="113dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/profile"
+        android:src="@drawable/profilepicdefault"
+        app:layout_constraintBottom_toTopOf="@+id/register_fullname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/register_weight"
+        android:layout_width="247dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/signupfields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/register_height"
+        android:layout_width="247dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/signupfields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/register_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/register_fullname"
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/signupfields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/register_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/register_address"
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/signupfields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/register_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/register_email"
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/signupfields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/register_phone"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/register_username"
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/signupfields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/register_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/register_phone"
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/signupfields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/register_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/signupfields"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/register_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="108dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/userpass_fields"
+        android:text="SIGN UP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="361dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="12dp"
+        android:width="287.5dp"
+        android:text="By Signing up, I consent that I have read and agree to all the terms and conditions."
+        android:textColor="#FF47525E"
+        android:textFontWeight="600"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <RadioGroup
         android:id="@+id/radioSex"
@@ -322,6 +335,54 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/register_weightRadio"
+        android:layout_width="82dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/register_weight">
+
+        <RadioButton
+            android:id="@+id/register_lb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="LBS" />
+
+        <RadioButton
+            android:id="@+id/register_kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KG" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/register_heightRadio"
+        android:layout_width="75dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toTopOf="@+id/register_weightRadio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintStart_toEndOf="@+id/register_height">
+
+        <RadioButton
+            android:id="@+id/register_cm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="CM" />
+
+        <RadioButton
+            android:id="@+id/register_ft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FT" />
 
     </RadioGroup>
 

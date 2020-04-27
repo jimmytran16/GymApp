@@ -12,14 +12,14 @@ public class User implements Serializable {
     private String phonenumber;
     private String username;
     private String password;
-    private double height;
-    private double weight;
+    private String height;
+    private String weight;
     private char gender;
     private String goaldate;
-    private double goalweight;
+    private String goalweight;
 
     //constructor
-    public User(char gender, String fullname, String address, String email, String phonenumber, String username, String password, double height, double weight) {
+    public User(char gender, String fullname, String address, String email, String phonenumber, String username, String password, String height, String weight) {
         Format f = new SimpleDateFormat("MM/dd/yy");
         String strDate = f.format(new Date());
         this.fullname = fullname;
@@ -35,90 +35,92 @@ public class User implements Serializable {
         this.goalweight = weight; //set default weight
     }
     public User(){}
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public void setGender(char gender) {
-        this.gender = gender;
-    }
-
-    public void setGoaldate(String goaldate) {
-        this.goaldate = goaldate;
-    }
-
-    public void setGoalweight(double goalweight) {
-        this.goalweight = goalweight;
-    }
-
-    public String getGoaldate() {
-        return goaldate;
-    }
-
-    public double getGoalweight() {
-        return goalweight;
-    }
 
     public String getFullname() {
         return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getAddress() {
         return address;
     }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public String getEmail() {
         return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPhonenumber() {
         return phonenumber;
     }
 
-    public char getGender(){
-        return gender;
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
+
     public String getUsername() {
         return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public double getHeight() {
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getHeight() {
         return height;
     }
 
-    public double getWeight() {
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public String getWeight() {
         return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public String getGoaldate() {
+        return goaldate;
+    }
+
+    public void setGoaldate(String goaldate) {
+        this.goaldate = goaldate;
+    }
+
+    public String getGoalweight() {
+        return goalweight;
+    }
+
+    public void setGoalweight(String goalweight) {
+        this.goalweight = goalweight;
     }
 }

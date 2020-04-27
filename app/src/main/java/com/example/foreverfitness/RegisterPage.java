@@ -23,21 +23,23 @@ import org.w3c.dom.Text;
 public class RegisterPage extends AppCompatActivity {
     private TextView fullname,address,email,phone,username,password,height,weight;
     private Button signupBtn;
-    private RadioGroup radioGenderGroup;
-    private RadioButton radioGenderChosen;
+    private RadioGroup radioGenderGroup,radioHeight,radioWeight;
+    private RadioButton radioGenderChosen,radioHeightChosen,radioWeightChosen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_activity);
-        fullname = (TextView)findViewById(R.id.fullname);
-        address = (TextView)findViewById(R.id.address);
-        email = (TextView)findViewById(R.id.email);
-        phone = (TextView)findViewById(R.id.phone);
-        username = (TextView)findViewById(R.id.signup_username);
-        password = (TextView)findViewById(R.id.signup_password);
-        height = (TextView)findViewById(R.id.height);
-        weight = (TextView)findViewById(R.id.weight);
+        fullname = (TextView)findViewById(R.id.register_fullname);
+        address = (TextView)findViewById(R.id.register_address);
+        email = (TextView)findViewById(R.id.register_email);
+        phone = (TextView)findViewById(R.id.register_phone);
+        username = (TextView)findViewById(R.id.register_username);
+        password = (TextView)findViewById(R.id.register_password);
+        height = (TextView)findViewById(R.id.register_height);
+        weight = (TextView)findViewById(R.id.register_weight);
         radioGenderGroup= (RadioGroup)findViewById(R.id.radioSex);
+        radioHeight= (RadioGroup)findViewById(R.id.register_heightRadio);
+        radioWeight= (RadioGroup)findViewById(R.id.register_weightRadio);
         signupBtn = (Button)findViewById(R.id.signup);
         //set a click listener for the sign up button
         signupBtn.setOnClickListener(new View.OnClickListener() {
@@ -46,10 +48,19 @@ public class RegisterPage extends AppCompatActivity {
                 //Get an instance of the user Model and pass in the information from the inputs
                 //check for the male or female radio button that is selected
                 int selected_id = radioGenderGroup.getCheckedRadioButtonId();
+                int selected_height = radioHeight.getCheckedRadioButtonId();
+                int selected_weight = radioWeight.getCheckedRadioButtonId();
+
+                radioGenderChosen = (RadioButton)findViewById(selected_id);
+                radioHeightChosen = (RadioButton)findViewById(selected_id);
                 radioGenderChosen = (RadioButton)findViewById(selected_id);
                 char gender = getGender(radioGenderChosen.getText().toString());
+                //chosen measurements for height and weight
+                String height_measurement = radioHeightChosen.getText().toString();
+                String weight_measurement = radioWeightChosen.getText().toString();
+
                 User user = new User(gender,fullname.getText().toString(),address.getText().toString(),email.getText().toString(),phone.getText().toString(),
-                        username.getText().toString(),password.getText().toString(),Double.parseDouble(height.getText().toString()),Double.parseDouble(weight.getText().toString()));
+                        username.getText().toString(),password.getText().toString(),height.getText().toString()+" "+height_measurement,weight.getText().toString()+" "+weight_measurement);
                 DataBaseHelper db = new DataBaseHelper(RegisterPage.this); //get the db instance, passing in the activity context
                 if(db.addUser(user)){
                     Log.d("msg","SUCCESS INSERT!");

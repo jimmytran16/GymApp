@@ -31,8 +31,8 @@ public class UserDashboard extends AppCompatActivity {
 //        User user = (User)getIntent().getSerializableExtra("User"); //get the User object from the intent
         FULLNAME.setText(UserAuth.currentUser.getFullname());
         GENDER.setText(String.valueOf(UserAuth.currentUser.getGender()));
-        WEIGHT.setText(String.valueOf(UserAuth.currentUser.getWeight()));
-        HEIGHT.setText(String.valueOf(UserAuth.currentUser.getHeight()));
+        WEIGHT.setText(UserAuth.currentUser.getWeight());
+        HEIGHT.setText(UserAuth.currentUser.getHeight());
         Log.d(LOG,UserAuth.currentUser.getPhonenumber());
         signOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
