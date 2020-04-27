@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp">
+
+        <TextView
+            android:id="@+id/dateLogView"
+            android:layout_width="205dp"
+            android:textSize="17.5sp"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            android:textColor="#FF47525E"
+            android:gravity="center"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/weightLogView"
+            android:layout_width="205dp"
+            android:textColor="#FF47525E"
+            android:textStyle="bold"
+            android:textSize="17.5sp"
+            android:layout_height="53dp"
+            android:gravity="center"
+            android:text="TextView" />
+    </LinearLayout>
+
+</LinearLayout>

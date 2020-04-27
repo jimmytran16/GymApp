@@ -10,9 +10,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foreverfitness.Model.History;
 import com.example.foreverfitness.Model.User;
 import com.example.foreverfitness.db.DataBaseHelper;
 import com.example.foreverfitness.auth.UserAuth;
+
+import java.util.ArrayList;
 
 
 public class SignInPage extends AppCompatActivity {
@@ -48,6 +51,10 @@ public class SignInPage extends AppCompatActivity {
                     if(u!=null){
                         Intent intent = new Intent(getApplicationContext(),UserDashboard.class);
                         UserAuth.logIn(u); // log the user into by passing the User object into the UserAuth object
+                        ArrayList<History> logs_list = db.loadLogs();
+                        if(logs_list!=null){ //if you have logs from the database, then populate to the UserAuth's ArrayList
+                            UserAuth.LIST_OF_LOGS = logs_list;
+                        }
                         startActivity(intent);
                     }
                     else{ // If there is no user with that username then prompt user

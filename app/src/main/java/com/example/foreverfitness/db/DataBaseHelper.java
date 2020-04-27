@@ -13,6 +13,8 @@ import com.example.foreverfitness.Model.History;
 import com.example.foreverfitness.Model.User;
 import com.example.foreverfitness.auth.UserAuth;
 
+import java.util.ArrayList;
+
 
 public class DataBaseHelper extends SQLiteOpenHelper {
     private String LOG = "DataBaseHelper.class";
@@ -71,9 +73,28 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             return false;
         }
         else{
+            UserAuth.LIST_OF_LOGS.add(history);
             db.close();
             return true;
         }
+    }
+    public ArrayList<History> loadLogs(){
+        ArrayList<History> historyLogs = new ArrayList<>();
+        String USERNAME = UserAuth.currentUser.getUsername();
+        String query = "SELECT * from Logs where username = '"+USERNAME+"';"; //query for the user from the database
+        SQLiteDatabase db = this.getReadableDatabase(); //only readable, not update or delete operations can be conducted
+        Cursor cur = db.rawQuery(query,null); //cursor is a result set
+        if(cur.moveToFirst()){
+            do{
+                History history = new History(cur.getString(0),cur.getString(1),cur.getString(2));
+                Log.d(LOG,"ENTRY: "+cur.getString(1)+" WEIGHT: "+cur.getString(2));
+                historyLogs.add(history);
+            }while(cur.moveToNext());
+        }
+        if(historyLogs.isEmpty()){ //if the list is empty, that means the user does not have any logs, then we will return null;
+            return null;
+        }
+        return historyLogs;
     }
     public User getUser(String username,String password){
         User user;

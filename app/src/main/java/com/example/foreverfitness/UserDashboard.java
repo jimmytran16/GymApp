@@ -30,6 +30,7 @@ public class UserDashboard extends AppCompatActivity {
         signOutBtn = (Button)findViewById(R.id.signoutBtn);
         weightEditBtn = (ImageButton)findViewById(R.id.weightEditBtn);
         accountSettingsBtn = (ImageButton)findViewById(R.id.accountSettingBtn);
+        historyLogBtn = (ImageButton)findViewById(R.id.historyLogBtn);
 //        User user = (User)getIntent().getSerializableExtra("User"); //get the User object from the intent
         FULLNAME.setText(UserAuth.currentUser.getFullname());
         GENDER.setText(String.valueOf(UserAuth.currentUser.getGender()));
@@ -60,6 +61,12 @@ public class UserDashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(UserDashboard.this,WeightEntryPage.class));
+            }
+        });
+        historyLogBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UserDashboard.this,WeightEntryHistory.class));
             }
         });
     }

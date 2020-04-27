@@ -12,10 +12,12 @@ public class UserAuth {
     public static void logIn(User user){
         isLoggedin = true;
         currentUser = user;
+        LIST_OF_LOGS = new ArrayList<>(); //list of logs that will be set to the UserAuth when the user logs in
     }
     public static void logout(){
         isLoggedin = false; //set isLogedIn to false because they are logged out
         currentUser = null; //empty the currentUser object
+        LIST_OF_LOGS.removeAll(LIST_OF_LOGS); //empty out the arraylist
     }
     public static void updateUser(User user){ //function to update the user when they update their settings
         currentUser = user;
