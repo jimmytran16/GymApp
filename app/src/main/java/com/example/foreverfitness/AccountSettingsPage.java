@@ -86,7 +86,7 @@ public class AccountSettingsPage extends AppCompatActivity {
                         HEIGHT.getText().toString(),WEIGHT.getText().toString());
                 user.setGoalweight(GOAL_WEIGHT.getText().toString());
                 user.setGoaldate(GOAL_DATE.getText().toString());
-
+                user.setProfilepic(UserAuth.currentUser.getProfilepic());
                 UserAuth.currentUser = user;
 
                 DataBaseHelper db = new DataBaseHelper(AccountSettingsPage.this);
