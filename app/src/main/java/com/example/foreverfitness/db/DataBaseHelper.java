@@ -5,6 +5,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
@@ -13,6 +15,7 @@ import com.example.foreverfitness.Model.History;
 import com.example.foreverfitness.Model.User;
 import com.example.foreverfitness.auth.UserAuth;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 
@@ -26,7 +29,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     // this ia called the firs time a a db is accessed there should be code in here to eate a new database.
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CreateTableQueries = "CREATE TABLE Users (fullname varchar(40),address varchar(60),email varchar(30),phonenumber varchar(20),username varchar(20),password varchar(30),height varchar(7),weight varchar(7),goalweight varchar(7),goaldate varchar(11),gender varchar(1));";
+        String CreateTableQueries = "CREATE TABLE Users (fullname varchar(40),address varchar(60),email varchar(30),phonenumber varchar(20),username varchar(20),password varchar(30)," +
+                "height varchar(7),weight varchar(7),goalweight varchar(7),goaldate varchar(11),gender varchar(1),profilepic longblob);";
+
         String CreateLogsQuery = "CREATE TABLE Logs(username varchar(20),date_entry varchar(11),weight_entry varchar(7));";
         db.execSQL(CreateTableQueries);
         db.execSQL(CreateLogsQuery);
@@ -50,6 +55,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         contents.put("goalweight",user.getGoalweight());
         contents.put("goaldate",user.getGoaldate());
         contents.put("gender",String.valueOf(user.getGender()));
+        contents.put("profilepic",bitmapToArray(user.getProfilepic())); //convert bitmap to array and put into the DB
         long success = db.insert("Users",null,contents);
         if(success == -1){
             db.close();
@@ -118,6 +124,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 user.setGoalweight(cur.getString(8));
                 user.setGoaldate(cur.getString(9));
                 user.setGender(cur.getString(10).charAt(0));
+                user.setProfilepic(arrayToBitmap(cur.getBlob(11)));
                 db.close();
             }else { //if doesnt match, set user object to be a NULL value
                 Log.d(LOG,"But password does not match!");
@@ -137,7 +144,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         //update setting
         //sql to pass onto the database to update the user
         ContentValues cv = new ContentValues();
-
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contents = new ContentValues(); //object to store user values in a key value fashion to insert into the DB
         contents.put("fullname",UserAuth.currentUser.getFullname());
@@ -151,6 +157,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         contents.put("goalweight",UserAuth.currentUser.getGoalweight());
         contents.put("goaldate",UserAuth.currentUser.getGoaldate());
         contents.put("gender",String.valueOf(UserAuth.currentUser.getGender()));
+        //MAYBE NEED THE PHOTO CONTENTS
         long success = db.update(USER_TABLE,contents,"username=?",new String[]{UserAuth.currentUser.getUsername()});
         if(success == 1){
             db.close();
@@ -162,5 +169,32 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             Log.d("DataBaseHelper.class","FAIL UPDATE");
             return false;
         }
+    }
+    public boolean updateProfilePicture(){
+        ContentValues cv = new ContentValues();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contents = new ContentValues(); //object to store user values in a key value fashion to insert into the DB
+        contents.put("profilepic",bitmapToArray(UserAuth.currentUser.getProfilepic()));
+        long success = db.update(USER_TABLE,contents,"username=?",new String[]{UserAuth.currentUser.getUsername()});
+        if(success ==1){
+            Log.d("DataBaseHelper.class","SUCCESS UPDATE");
+            return true;
+        }else{Log.d("DataBaseHelper.class","FALSE UPDATE");return false;}
+    }
+
+    //FUNCTIONS FOR CONVERSION OF bitmap and array representation of images
+    // convert from bitmap to byte array
+    private static byte[] bitmapToArray(Bitmap bitmap) {
+        if(bitmap ==null){return null;}
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream);
+        return stream.toByteArray();
+    }
+
+    // convert from byte array to bitmap
+    private static Bitmap arrayToBitmap(byte[] image) {
+        if(image == null){return null;}
+        return BitmapFactory.decodeByteArray(image, 0, image.length);
     }
 }

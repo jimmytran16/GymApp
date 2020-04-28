@@ -1,4 +1,6 @@
 package com.example.foreverfitness.Model;
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -17,6 +19,7 @@ public class User implements Serializable {
     private char gender;
     private String goaldate;
     private String goalweight;
+    private Bitmap profilepic;
 
     //constructor
     public User(char gender, String fullname, String address, String email, String phonenumber, String username, String password, String height, String weight) {
@@ -33,8 +36,17 @@ public class User implements Serializable {
         this.weight = weight;
         this.goaldate = strDate; //set default current date until update
         this.goalweight = weight; //set default weight
+        this.profilepic = null;
     }
     public User(){}
+
+    public Bitmap getProfilepic() {
+        return profilepic;
+    }
+
+    public void setProfilepic(Bitmap profilepic) {
+        this.profilepic = profilepic;
+    }
 
     public String getFullname() {
         return fullname;

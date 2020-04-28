@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,18 +18,25 @@ public class UserDashboard extends AppCompatActivity {
     TextView FULLNAME, GENDER,WEIGHT,HEIGHT;
     Button signOutBtn;
     ImageButton cameraBtn,accountSettingsBtn,weightEditBtn,historyLogBtn;
+    ImageView profileImageView;
     private String LOG = "UserDashBoard.class";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //check if user is logged in .. if not redirect to log in page
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard_activity);
+        profileImageView = (ImageView)findViewById(R.id.profileImageView);
+        //Check if there is a profile picture existent in the DB
+        if(UserAuth.currentUser.getProfilepic()!=null){
+            profileImageView.setImageBitmap(UserAuth.currentUser.getProfilepic());
+        }
         FULLNAME = (TextView)findViewById(R.id.dash_name);
         GENDER = (TextView)findViewById(R.id.dash_gender);
         WEIGHT = (TextView)findViewById(R.id.dash_weight);
         HEIGHT = (TextView)findViewById(R.id.dash_height);
         signOutBtn = (Button)findViewById(R.id.signoutBtn);
         weightEditBtn = (ImageButton)findViewById(R.id.weightEditBtn);
+        cameraBtn = (ImageButton)findViewById(R.id.cameraBtn);
         accountSettingsBtn = (ImageButton)findViewById(R.id.accountSettingBtn);
         historyLogBtn = (ImageButton)findViewById(R.id.historyLogBtn);
 //        User user = (User)getIntent().getSerializableExtra("User"); //get the User object from the intent
@@ -67,6 +75,12 @@ public class UserDashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(UserDashboard.this,WeightEntryHistory.class));
+            }
+        });
+        cameraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ImageCapture.class));
             }
         });
     }

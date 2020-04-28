@@ -25,6 +25,7 @@
         <activity android:name=".UserDashboard"></activity>
         <activity android:name=".WeightEntryHistory"></activity>
         <activity android:name=".AccountSettingsPage"></activity>
+        <activity android:name=".ImageCapture"></activity>
     </application>
 
 </manifest>
