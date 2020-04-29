@@ -48,7 +48,7 @@
         android:layout_marginBottom="36dp"
         android:background="@drawable/entryshape"
         android:ems="10"
-        android:hint="Enter Date"
+        android:hint="Click to choose date"
         app:layout_constraintBottom_toTopOf="@+id/weightEntry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"

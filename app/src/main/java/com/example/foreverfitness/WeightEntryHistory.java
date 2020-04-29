@@ -15,11 +15,13 @@ import java.util.ArrayList;
 
 public class WeightEntryHistory extends AppCompatActivity {
     ArrayList<History> historyArrayList;
+    Button backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.history_log_activity);
         ListView historyLogView = (ListView)findViewById(R.id.historyView);
+        backBtn = (Button)findViewById(R.id.logBackBtn);
         //SET ALL BUTTONS FOR ON CLICK LISTENER
         //Check if the user's entry logs is existing
         if(UserAuth.LIST_OF_LOGS == null){
@@ -32,5 +34,11 @@ public class WeightEntryHistory extends AppCompatActivity {
         }
         HistoryLogAdapter adapter = new HistoryLogAdapter(WeightEntryHistory.this,R.layout.log_layout,historyArrayList);
         historyLogView.setAdapter(adapter);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WeightEntryHistory.this,UserDashboard.class));
+            }
+        });
     }
 }

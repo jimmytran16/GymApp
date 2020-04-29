@@ -8,17 +8,28 @@
     tools:context=".MainActivity">
 
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="136dp"
-        android:layout_height="49dp"
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="163dp"
+        android:layout_height="32dp"
         android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="none"
+        android:text="WEIGHT ENTRY LOGS"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/editText3"
+        android:layout_width="103dp"
+        android:layout_height="26dp"
+        android:inputType="none"
         android:text="Weight Entered"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/historyView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintHorizontal_bias="0.721"
         app:layout_constraintStart_toEndOf="@+id/editText2" />
 
     <ListView
@@ -28,19 +39,32 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="90dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:inputType="none"
+        android:text="Date Of Entry"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/historyView"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="136dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Date Of Entry"
+    <Button
+        android:id="@+id/logBackBtn"
+        android:layout_width="99dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/uploadshape"
+        android:text="BACK"
         app:layout_constraintBottom_toTopOf="@+id/historyView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

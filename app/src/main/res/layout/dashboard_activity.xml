@@ -10,68 +10,127 @@
         android:id="@+id/dash_weight"
         android:layout_width="155dp"
         android:layout_height="27dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/dash_height"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profileImageView" />
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toEndOf="@+id/profileImageView"
+        app:layout_constraintTop_toBottomOf="@+id/dash_gender" />
 
     <TextView
         android:id="@+id/dash_height"
         android:layout_width="155dp"
         android:layout_height="27dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/historyLogBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toEndOf="@+id/profileImageView" />
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toEndOf="@+id/profileImageView"
+        app:layout_constraintTop_toBottomOf="@+id/dash_weight" />
 
     <TextView
         android:id="@+id/dash_gender"
         android:layout_width="155dp"
         android:layout_height="27dp"
+        android:layout_marginTop="12dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/dash_weight"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.203"
         app:layout_constraintStart_toEndOf="@+id/profileImageView"
-        app:layout_constraintTop_toBottomOf="@+id/dash_name"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/dash_name" />
 
     <ImageView
         android:id="@+id/profileImageView"
-        android:layout_width="185dp"
-        android:layout_height="127dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="197dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/profile"
         android:src="@drawable/profilepicdefault"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+    <TextView
+        android:id="@+id/editText7"
+        android:layout_width="96dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:inputType="none"
         android:text="SUMMARY"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="113dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:inputType="none"
+        android:text="TAKE PROFILE PICTURE"
+        android:textSize="35px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/editText6"
+        app:layout_constraintTop_toBottomOf="@+id/cameraBtn" />
+
+    <TextView
+        android:id="@+id/editText5"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:ems="10"
+        android:inputType="none"
+        android:text="EDIT WEIGHT ENTRY"
+        android:textSize="35px"
+        app:layout_constraintBottom_toTopOf="@+id/accountSettingBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightEditBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/editText6"
+        android:layout_width="167dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="none"
+        android:text="EDIT ACCOUNT SETTINGS"
+        android:textSize="35px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountSettingBtn" />
+
+    <TextView
+        android:layout_width="99dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="none"
+        android:text="VIEW HISTORY"
+        android:textSize="35px"
+        app:layout_constraintBottom_toTopOf="@+id/cameraBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/editText5"
+        app:layout_constraintTop_toBottomOf="@+id/historyLogBtn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/weightEditBtn"
         android:layout_width="156dp"
         android:layout_height="149dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/profileedit"
-        app:layout_constraintEnd_toStartOf="@+id/historyLogBtn"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="35px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
 
@@ -79,21 +138,23 @@
         android:id="@+id/historyLogBtn"
         android:layout_width="156dp"
         android:layout_height="149dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
-        android:layout_marginBottom="252dp"
         android:background="@drawable/history_icon"
-        app:layout_constraintBottom_toTopOf="@+id/signoutBtn"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintStart_toEndOf="@+id/weightEditBtn"
+        app:layout_constraintTop_toBottomOf="@+id/dash_height" />
 
     <ImageButton
         android:id="@+id/cameraBtn"
         android:layout_width="156dp"
         android:layout_height="149dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/camera_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintHorizontal_bias="0.417"
         app:layout_constraintStart_toEndOf="@+id/accountSettingBtn"
         app:layout_constraintTop_toBottomOf="@+id/historyLogBtn" />
 
@@ -101,9 +162,9 @@
         android:id="@+id/accountSettingBtn"
         android:layout_width="156dp"
         android:layout_height="149dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/settings_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weightEditBtn" />
@@ -112,19 +173,19 @@
         android:id="@+id/dash_name"
         android:layout_width="155dp"
         android:layout_height="27dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toEndOf="@+id/profileImageView"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText7" />
 
     <Button
         android:id="@+id/signoutBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_width="129dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/signoutshape"
         android:text="-SIGN OUT-"
         app:layout_constraintBottom_toBottomOf="parent"
